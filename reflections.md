@@ -15,17 +15,17 @@
 3. RESPONSE
 
 # Tuesday
-- [x] What did you achieve yesterday?
-- [x] What are your goals for today?
-- [x] Do you have any blockers?
+- [x] What did you achieve yesterday? creating the player
+- [x] What are your goals for today? making everything move
+- [x] Do you have any blockers? 
 1. RESPONSE
 2. RESPONSE
 3. RESPONSE
 
 # Wednesday
-- [x] What did you achieve yesterday?
-- [x] What are your goals for today?
-- [x] Do you have any blockers?
+- [x] What did you achieve yesterday? Got the title page up and logo just not animations and got the astroids moving and I also kind of got the player moving with the arrow.
+- [x] What are your goals for today? finish the title screen so I can get back to the game animations
+- [x] Do you have any blockers? yes getting my play font right under my logo
 1. RESPONSE
 2. RESPONSE
 3. RESPONSE
