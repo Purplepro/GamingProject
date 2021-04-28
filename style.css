@@ -17,7 +17,7 @@
     /* height: 900px;
     width: 1200px; */
     background-color: rgb(108, 63, 231);
-    border: 4px dashed burlywood;
+    border: 6px dashed burlywood;
     border-radius: 2em;
     z-index: 1;
 }
@@ -30,7 +30,7 @@
     z-index: 100;
     cursor: pointer;
     border-radius: 2em;
-    border:4px solid burlywood;
+    border: 6px solid burlywood;
     transition: opacity 2s;
 }
 
@@ -54,7 +54,7 @@
     font-family: 'Zen Dots', cursive;
     position:inherit;
     margin-top:500px;
-    margin-right: auto;
+    right: 480px;
     
 }
 
@@ -75,7 +75,7 @@ p {
     color:white;
     font-size: 25px;
     font-family: 'Zen Dots', cursive;
-    margin-top: 600px;
+    margin-top: 650px;
     text-align: center;
     position: absolute;
 }

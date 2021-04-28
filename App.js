@@ -94,14 +94,13 @@ let all_Asteroids = [];
 class Astroider {
     constructor() {
     this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.radius = [40, 60, 50, 30]
-    this.speed = Math.random() * 5 + 1
+    this.y = Math.random() * 100 - canvas.height;
+    this.radius = Math.random() * 40 + 60;
+    this.speed = Math.random() * 5 + 1;
     this.distance;
     } 
 
     Appear() {
-    ctx.fillstyle = 'grey';
     ctx.beginPath();
     //       x    y 
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
@@ -111,8 +110,8 @@ class Astroider {
 
     update() { 
     
-      
-        this.y -= this.speed;
+    
+        this.y += this.speed;
     
     }
 
@@ -123,7 +122,7 @@ function newAsteroid(){
     if( gameFrame % 50 == 0){
         all_Asteroids.push(new Astroider());
     }
-    for(let i = 0; i < all_Asteroids; i++ ) {
+    for(let i = 0; i < all_Asteroids.length; i++ ) {
         all_Asteroids[i].update();
         all_Asteroids[i].Appear();
     }
@@ -132,7 +131,7 @@ function newAsteroid(){
 
 
 
-    let updateAster = function() {
+    let updateAster = function() { 
         requestAnimationFrame(updateAster);
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         ship.Appear();
