@@ -31,9 +31,9 @@
 3. RESPONSE
 
 # Thursday
-- [x] What did you achieve yesterday?
-- [x] What are your goals for today?
-- [x] Do you have any blockers?
+- [x] What did you achieve yesterday? finished the title screen and everything is moving
+- [x] What are your goals for today? do collision detection possibly projectiles and then game over and im done
+- [x] Do you have any blockers? No blockers
 1. RESPONSE
 2. RESPONSE
 3. RESPONSE
