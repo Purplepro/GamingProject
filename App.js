@@ -21,22 +21,22 @@ function fadeOut(){
 
 
 // PLAYER WELLBEING
-let canvasPosition =canvas.getBoundingClientRect();
+let canvasPosition = canvas.getBoundingClientRect();
  const mouse = {
-     x: canvas.width / 2,
-     y: canvas.height / 2,
- }
+//      x: canvas.width / 2,
+//      y: canvas.height / 2,
+//  }
 
-canvas.addEventListener('click', function(event){
-mouse.x = event.x -= canvasPosition.left;
-mouse.y = event.y -= canvasPosition.top;
-});
+// canvas.addEventListener('mouseover', function(event){
+// mouse.x = event.x += canvasPosition.left;
+// mouse.y = event.y += canvasPosition.top;
+// });
 
 
 
 
 class Player {
-    constructor(x, y, radius, speed, x_velocity, y_velocity, forward) {
+    constructor(x, y, radius, speed, forward) {
 
     this.x = x;
     this.y = y;
@@ -45,12 +45,12 @@ class Player {
     this.x_velocity = x_velocity;
     this.y_velocity = y_velocity;
     this.forward = forward = true;
-    // this.color = color;
+    //this.color = color;
     } 
 
     Appear() {
     if (mouse.click) {
-     ctx.lineWidth = 0.8;
+     ctx.lineWidth = 0.2;
      ctx.beginPath();
      ctx.moveTo(this.x, this.y);
      ctx.lineTo(mouse.x, mouse.y);
@@ -58,7 +58,6 @@ class Player {
         } 
     ctx.beginPath(); 
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.closePath();
         }
@@ -99,7 +98,7 @@ class Astroider {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * 100 - canvas.height;
     this.radius = Math.random() * 40 + 60;
-    this.speed = 5 + 1;
+    this.speed = 8;
     this.distance;
     } 
 
@@ -124,7 +123,6 @@ class Astroider {
 
 }
 
-
 function newAsteroid(){
     if( gameFrame % 50 == 0){
         all_Asteroids.push(new Astroider());
@@ -134,17 +132,10 @@ function newAsteroid(){
         all_Asteroids[i].Appear();
     if(all_Asteroids[i].distance < all_Asteroids[i].radius + ship.radius){
         cancelAnimationFrame(endAnimation);
-        clearRect(0, 0, canvas.width, canvas.height);
-        canvas.getElementsById();
         }
+    
     }
 }
-
-// let gameover = document.getElementById('gameover');
-
-
-
-
 
 
    let endAnimation 
@@ -156,16 +147,12 @@ function newAsteroid(){
         ship.update();
         gameFrame++;
         newAsteroid();
-        ctx.font = '50px georgia';
-        ctx.fillText('Score: ' + score, 20, 50);
-
+        ctx.fillText('Score: ' + score, 10, 50,  );
 
         
     }
 
     updateAster();
-
-
 
 // function collision() {
 //     for( let c = 0; c < all_Asteroids.length; c++)
@@ -178,16 +165,41 @@ function newAsteroid(){
 // Projectiles
 
 
-let gameover = document.getElementById('gameover');
-let rButton = document.getElementById('Resetb');
+// class Projectiles() {
+//         constructor(x, y, radius, speed, Key) {
+    
+//         this.x = x;
+//         this.y = y;
+//         this.radius = radius; 
+//         this.speed = speed;
+//         this.x_velocity = x_velocity;
+//         this.y_velocity = y_velocity;
+//         this.forward = forward = true;
+//         this.key = key;
+//         // this.color = color;
+//         } 
+    
+//         Appear() {
+//         if (zKey.click) {
+//          ctx.lineWidth = 0.2;
+//          ctx.beginPath();
+//          ctx.moveTo();
+//          ctx.lineTo();
+//          ctx.fill();
+//             } 
+//         ctx.beginPath(); 
+//         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+//         ctx.fill();
+//         ctx.closePath();
+//          }
+    
+//     }
 
-rButton.addEventListener('click', function(){
+       
 
-})
+      
 
-
-
-
+    
 
 
 

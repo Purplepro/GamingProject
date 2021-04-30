@@ -81,7 +81,7 @@ const ship = new Player(550, 800, 25, 0, 0);
 ship.Appear();
 // Ship.movement();
 ```
-I included the appear function inside of the class in order for the shape to be created and then I added the update function for it to update and recreate the shape each time it moves because in order for shapes to move in canvas and in gaming in general, the shape must be erased and redrawn each time the shape is moved which is why inside of my animate function I used request animation which is required if you want you shape to move and I also included the clearRect method. This laid the foundation which allowed me to reuse this code for my asteroid.
+I included the appear function inside of the class in order for the shape to be created and then I added the update function for it to update and recreate the shape each time it moves because in order for shapes to move in canvas and in gaming in general, the shape must be erased and redrawn each time the shape is moved which is why inside of my animate function I used request animation which is required if you want you shape to move and I also included the clearRect method. This laid the foundation which allowed me to reuse this code for my asteroid. My asteroid is a bit different in terms of code layout because I wanted to have multiple asteroid coming from the top of the page.
 
 ## Initial Wireframes:
 Initial Wireframes go here ( images )
