@@ -46,3 +46,7 @@
 2. RESPONSE
 3. RESPONSE
 
+ What HTML, CSS, and or JavaScript skills you learned while building your game?
+ for css I learned using z index which puts elements in front or in the back of other elements. also learing how to fadeout a page combining css and javascript. With javascript just learning how to make use of certain syntax so you wont have to repeat code manually. I also know a little bit about making things appear inside of an empty array.
+2 What's one topic you want to spend more practice on?
+I want to spend more time on everything but mostly just the fundamentals of javascript. just want to get comfortable with that.

@@ -21,41 +21,33 @@ function fadeOut(){
 
 
 // PLAYER WELLBEING
-let canvasPosition =canvas.getBoundingClientRect();
+let canvasPosition = canvas.getBoundingClientRect();
  const mouse = {
      x: canvas.width / 2,
      y: canvas.height / 2,
+     click: false
  }
 
-canvas.addEventListener('click', function(event){
-mouse.x = event.x -= canvasPosition.left;
-mouse.y = event.y -= canvasPosition.top;
+canvas.addEventListener('mousedown', function(e){
+mouse.click = true;
+mouse.x = e.x -= canvasPosition.left;
+mouse.y = e.y -= canvasPosition.top;
 });
 
 
 
-
 class Player {
-    constructor(x, y, radius, speed, x_velocity, y_velocity, forward) {
-
+    constructor(x, y, radius, speed, forward) {
     this.x = x;
     this.y = y;
     this.radius = radius; 
     this.speed = speed;
-    this.x_velocity = x_velocity;
-    this.y_velocity = y_velocity;
     this.forward = forward = true;
-    // this.color = color;
     } 
 
     Appear() {
     if (mouse.click) {
-     ctx.lineWidth = 0.8;
-     ctx.beginPath();
-     ctx.moveTo(this.x, this.y);
-     ctx.lineTo(mouse.x, mouse.y);
-     ctx.fill();
-        } 
+    }
     ctx.beginPath(); 
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     ctx.fillStyle = 'yellow';
@@ -66,21 +58,18 @@ class Player {
     update() {
        const dx = this.x = mouse.x;
        const dy = this.y = mouse.y;
-       if(mouse.x !== this.x) {
-           this.x -= dx/50;
-       }
-       if(mouse.y !== this.y) {
-           this.y -= dy/50;
-       }
    }
 };
- 
 
 
-   // tried to center by dividng by two but ran into a blocker so instead 
-//    I just adjested the x and y axis inside of the constant "Ship"
-const ship = new Player(550, 800, 25, 0, 0);    
-ship.Appear();
+
+
+
+
+
+
+const ship = new Player(600, 500, 30, 0, Math.PI * 2);    
+
 // Ship.movement();
 
 
@@ -178,12 +167,7 @@ function newAsteroid(){
 // Projectiles
 
 
-let gameover = document.getElementById('gameover');
-let rButton = document.getElementById('Resetb');
 
-rButton.addEventListener('click', function(){
-
-})
 
 
 

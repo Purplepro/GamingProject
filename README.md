@@ -23,10 +23,9 @@ Other install instructions will go here
 How the game works will go here
 Code snippets go here
 
+## Recources Used
+https://www.youtube.com/channel/UC9Yp2yz6-pwhQuPlIDV_mjA
 
-# FUTURE CONSIDERATIONS
-
-Future considerations or stretch goals go here.
 
 
 # PROCESS WORK
@@ -34,7 +33,7 @@ I first started off by getting my boiler plate ready and inside the body I put 2
 
 After all of this planning I decided to go with canvas so i deleted the div inside the container div and replaced that with a canvas tag. I then activated canvas API by declaring it and giving it a getContext function which. I also get the element canvas by id so it can be manipulated. I first created my player by creating a class with a contructor function and made my player a circular shape which required the PI method times 2 to create a circle and required the x and y coordinates aswell as the radius as shown.
 
-```class Player {
+``` class Player {
     constructor(x, y, radius, speed, x_velocity, y_velocity, forward) {
 
     this.x = x;
@@ -80,13 +79,14 @@ After all of this planning I decided to go with canvas so i deleted the div insi
 const ship = new Player(550, 800, 25, 0, 0);
 ship.Appear();
 // Ship.movement();
-```
-I included the appear function inside of the class in order for the shape to be created and then I added the update function for it to update and recreate the shape each time it moves because in order for shapes to move in canvas and in gaming in general, the shape must be erased and redrawn each time the shape is moved which is why inside of my animate function I used request animation which is required if you want you shape to move and I also included the clearRect method. This laid the foundation which allowed me to reuse this code for my asteroid. My asteroid is a bit different in terms of code layout because I wanted to have multiple asteroid coming from the top of the page.
+``` 
+I included the appear function inside of the class in order for the shape to be created and then I added the update function for it to update and recreate the shape each time it moves because in order for shapes to move in canvas and in gaming in general, the shape must be erased and redrawn each time the shape is moved which is why inside of my animate function I used request animation which is required if you want you shape to move and I also included the clearRect method. This laid the foundation which allowed me to reuse this code for my asteroid. My asteroid is a bit different in terms of code layout because I wanted to have multiple asteroid coming from the top of the page. I still made a class function but when it came to the y coordinates it did math.random * 100 - canvas.height. This made the asteroids appear and come from the top of the page and basically fall down. to make the endless astroids appear, I made an empty array of astroids and
 
 ## Initial Wireframes:
 Initial Wireframes go here ( images )
 <img src="./OrbitalGrounds-logo.png">
 
-## Scratch Work:
+## Future Condsiderations:
 
-Scratch Work goes here
+want to add projectiles to shoot the asteroids and also want to add actual images of the asteroids coming down as well as a space ship picture.
+
