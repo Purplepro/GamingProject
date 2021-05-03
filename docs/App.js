@@ -45,7 +45,7 @@ class Player {
     this.forward = forward = true;
     } 
 
-    Appear() {
+    Appear1() {
     if (mouse.click) {
     }
     ctx.beginPath(); 
@@ -68,7 +68,8 @@ class Player {
 
 
 
-const ship = new Player(600, 500, 30, 0, Math.PI * 2);    
+const ship = new Player(600, 500, 30, 0, Math.PI * 2);  
+
 
 // Ship.movement();
 
@@ -98,6 +99,7 @@ class Astroider {
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     ctx.closePath();
     ctx.fill();
+    ctx.fillStyle = 'grey';
     }
 
     update() { 
@@ -141,10 +143,11 @@ function newAsteroid(){
    updateAster = function() { 
         endAnimation = requestAnimationFrame(updateAster);
         ctx.clearRect(0, 0, canvas.width, canvas.height)
-        ship.Appear();
+        ship.Appear1();
         ship.update();
         gameFrame++;
         newAsteroid();
+        ctx.fillStyle = 'white';
         ctx.font = '50px georgia';
         ctx.fillText('Score: ' + score, 20, 50);
 
@@ -156,11 +159,7 @@ function newAsteroid(){
 
 
 
-// function collision() {
-//     for( let c = 0; c < all_Asteroids.length; c++)
-//           let parts = all_Asteroids[c];
-    
-// }
+
 // collision detection           
 
 
